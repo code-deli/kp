@@ -1,0 +1,7 @@
+landoop is not working on M1
+
+
+git clone https://github.com/faberchri/fast-data-dev.git
+cd fast-data-dev
+docker build -t faberchri/fast-data-dev .
+docker run --rm -p 3030:3030 faberchri/fast-data-dev
