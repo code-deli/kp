@@ -7,7 +7,10 @@ if __name__ == '__main__':
         'client.id': 'my-client'
     }
     client = AdminClient(config)
-    newTopic = NewTopic('topic',num_partitions=1,replication_factor=1)
+    newTopic = NewTopic('mytopic',num_partitions=3,replication_factor=1)
+    # tdel = client.delete_topics(['topic'])
+    # print(tdel)
+
     res = client.create_topics([newTopic])
     print('---New Created Topics---')
     for key, val in res.items():
